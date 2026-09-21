@@ -16,6 +16,7 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="topbar">
     <div class="container">
@@ -39,8 +40,8 @@
           <i>Advanced CNC Machining</i>
         </span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
-      <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+      <nav class="main-nav" id="site-nav" aria-label="Primary">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="capabilities.html">Capabilities</a></li>
@@ -55,7 +56,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="page-hero tick-bg">
     <div class="container">
       <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>News</span></div>
@@ -70,19 +71,19 @@
       <div class="cards">
         <article class="card" data-reveal>
           <span class="k">Trade press &middot; Oct 2023</span>
-          <h3>Adapting and Thriving: The SKM Industries Advantage</h3>
+          <h2>Adapting and Thriving: The SKM Industries Advantage</h2>
           <p>CNC West Magazine profiled how SKM used collaborative robots to ride out the pandemic, earned AS9100 and reorganized around a four-day work week. The headline numbers: six people and five robots producing more than the shop did with 17.</p>
           <p class="mt-1"><a class="btn btn--red" href="https://www.cnc-west.com/adapting-and-thriving-the-skm-industries-advantage/" target="_blank" rel="noopener">Read the CNC West feature <span class="arr">&rarr;</span></a></p>
         </article>
         <article class="card" data-reveal data-delay="1">
           <span class="k">Scientific &middot; 2015-present</span>
-          <h3>Parts for the discovery of gravitational waves</h3>
+          <h2>Parts for the discovery of gravitational waves</h2>
           <p>Caltech selected SKM Industries to manufacture parts for LIGO and Advanced LIGO. The observatories made the first direct detection of gravitational waves, confirming a prediction made a century earlier.</p>
           <p class="mt-1"><a class="btn btn--ghost" href="quality.html">See the quality behind it</a></p>
         </article>
         <article class="card" data-reveal data-delay="2">
           <span class="k">Product &middot; 2023</span>
-          <h3>Part presentation kits for collaborative robots</h3>
+          <h2>Part presentation kits for collaborative robots</h2>
           <p>Building on its own cobot work, SKM introduced CNC machine-tending part presentation accessories, including gripper fingers and kits, and shares instructional videos on the CNC Cobot Solutions channel.</p>
           <p class="mt-1"><a class="btn btn--ghost" href="capabilities.html">Explore the automation</a></p>
         </article>
@@ -148,7 +149,7 @@
         </div>
       </div>
       <div>
-        <h4>Company</h4>
+        <h2>Company</h2>
         <ul>
           <li><a href="company.html">About SKM</a></li>
           <li><a href="capabilities.html">Capabilities</a></li>
@@ -158,7 +159,7 @@
         </ul>
       </div>
       <div>
-        <h4>Work with us</h4>
+        <h2>Work with us</h2>
         <ul>
           <li><a href="contact.html">Request a quote</a></li>
           <li><a href="contact.html">Submit a drawing</a></li>
@@ -167,7 +168,7 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <ul>
           <li>28966 North Hancock Parkway</li>
           <li>Valencia, CA 91355</li>

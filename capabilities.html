@@ -16,6 +16,7 @@
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="topbar">
     <div class="container">
@@ -39,8 +40,8 @@
           <i>Advanced CNC Machining</i>
         </span>
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
-      <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+      <nav class="main-nav" id="site-nav" aria-label="Primary">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="capabilities.html" aria-current="page">Capabilities</a></li>
@@ -55,7 +56,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="page-hero tick-bg">
     <div class="container">
       <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Capabilities</span></div>
@@ -235,7 +236,7 @@
         </div>
       </div>
       <div>
-        <h4>Company</h4>
+        <h2>Company</h2>
         <ul>
           <li><a href="company.html">About SKM</a></li>
           <li><a href="capabilities.html">Capabilities</a></li>
@@ -245,7 +246,7 @@
         </ul>
       </div>
       <div>
-        <h4>Work with us</h4>
+        <h2>Work with us</h2>
         <ul>
           <li><a href="contact.html">Request a quote</a></li>
           <li><a href="contact.html">Submit a drawing</a></li>
@@ -254,7 +255,7 @@
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h2>Contact</h2>
         <ul>
           <li>28966 North Hancock Parkway</li>
           <li>Valencia, CA 91355</li>

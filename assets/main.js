@@ -33,7 +33,12 @@
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", close);
     });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("open")) {
+        close();
+        toggle.focus();
+      }
+    });
   }
 
   /* Scroll reveal */
@@ -126,12 +131,19 @@
   /* Lightbox for gallery (minimal, keyboard accessible) */
   var lightbox = document.getElementById("lightbox");
   if (lightbox) {
+    /* The lightbox image is created here rather than shipped as an empty
+       <img src=""> placeholder, which makes the browser re-request the page. */
+    var lbFigure = lightbox.querySelector("figure");
     var lbImg = lightbox.querySelector("img");
+    if (!lbImg && lbFigure) {
+      lbImg = document.createElement("img");
+      lbFigure.insertBefore(lbImg, lbFigure.firstChild);
+    }
     var lbCap = lightbox.querySelector("figcaption");
     var lbClose = lightbox.querySelector(".lb-close");
     var openLb = function (fig) {
       var im = fig.querySelector("img");
-      if (!im) return;
+      if (!im || !lbImg) return;
       lbImg.src = im.src;
       lbImg.alt = im.alt || "";
       lbCap.textContent = (fig.querySelector("figcaption") || {}).textContent || "";
