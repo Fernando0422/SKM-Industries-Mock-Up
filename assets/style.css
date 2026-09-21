@@ -106,10 +106,11 @@ p { margin: 0 0 1em; }
   margin-bottom: 20px;
 }
 .kicker::before { content: ""; width: 24px; height: 1px; background: currentColor; display: inline-block; }
-.section--dark .kicker, .on-dark .kicker { color: #ff6a58; }
-/* The hero sits on --ink, a dark surface, but was not covered by the two rules above, so the
-   eyebrow rendered in --red over it and measured 3.24 to 1. */
-.hero .kicker { color: #ff6a58; }
+/* Every dark surface the eyebrow can land on. Listing only .section--dark and .on-dark left the
+   hero, the interior page hero and the closing CTA falling through to --red on --ink, all three
+   measuring 3.24 to 1 across seven elements each. */
+.section--dark .kicker, .on-dark .kicker, .hero .kicker, .page-hero .kicker, .cta .kicker { color: #ff6a58; }
+.hero .kicker { font-weight: 600; }
 .section-head { max-width: 780px; margin-bottom: clamp(34px, 5vw, 58px); }
 .section-head h2 { font-size: clamp(30px, 4vw, 46px); }
 .section-head .lead { color: var(--steel); font-size: 18px; margin-bottom: 0; }
